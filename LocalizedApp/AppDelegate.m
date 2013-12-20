@@ -20,6 +20,8 @@
 
 - (IBAction)openFiles:(id)sender {
     
+    [tableView setAllowsMultipleSelection: YES];
+    
     // Get file paths
     NSMutableArray* filePaths = [[NSMutableArray alloc] initWithCapacity: 0];
     OpenFilesPanel * panel = [[OpenFilesPanel alloc] init];
@@ -70,22 +72,35 @@
 }
 
 - (IBAction)deleteRow:(id)sender {
-    if ([tableView selectedRow] == -1) {
+    NSIndexSet* selectedIndexSet = [tableView selectedRowIndexes];
+    if (selectedIndexSet.count == 0) {
 		NSRunAlertPanel(@"Delete Error", @"No row is selected.", @"OK", nil, nil);
         return;
 	}
     
+    
     NSMutableArray* allLocalizeKeys = GLOBAL.allLocalizeKeys ;
     NSMutableDictionary* allFileContents = GLOBAL.allFileContents ;
     
-    NSInteger row = [tableView selectedRow];
-    NSString* deleteKey = [allLocalizeKeys objectAtIndex: row];
-    [allLocalizeKeys removeObjectAtIndex: row];
-    for (NSString* key in allFileContents) {
-        NSMutableDictionary* content = [allFileContents objectForKey:key];
-        [content removeObjectForKey: deleteKey];
+    // first
+    /*int (as commented, unreliable across different platforms)*/
+    NSUInteger currentIndex = [selectedIndexSet firstIndex];
+    while (currentIndex != NSNotFound) {
+        //use the currentIndex
+        NSString* deleteKey = [allLocalizeKeys objectAtIndex: currentIndex];
+        for (NSString* key in allFileContents) {
+            NSMutableDictionary* content = [allFileContents objectForKey:key];
+            [content removeObjectForKey: deleteKey];
+        }
+        //increment
+        currentIndex = [selectedIndexSet indexGreaterThanIndex: currentIndex];
+        
     }
     
+    // second
+    [allLocalizeKeys removeObjectsAtIndexes: selectedIndexSet];
+    
+    [tableView deselectAll:nil];
     [tableView reloadData];
 }
 

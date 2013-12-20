@@ -6,8 +6,8 @@
 
 
 @property (strong) NSMutableArray* allFilePaths;
-@property (nonatomic, strong) NSMutableDictionary* allFileContents;
 @property (strong, readonly) NSMutableArray* allLocalizeKeys;
+@property (nonatomic, strong) NSMutableDictionary* allFileContents;
 
 
 +(GlobalInstance*) getInstance ;

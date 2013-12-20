@@ -40,6 +40,7 @@ static GlobalInstance* sharedInstance = nil ;
             temp = keys;
         }
     }
+    
     // sort allLocalizeKeys
     NSArray* sorted = [temp sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [obj1 compare:obj2];

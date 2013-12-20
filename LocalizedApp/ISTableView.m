@@ -1,7 +1,7 @@
 #import "ISTableView.h"
 #import "AppInterface.h"
 
-#define NEW_KEY  @"zzzzzzzzzzz_NEW_KEY"
+#define NEW_KEY  @"zz--"
 
 @interface ISTableView () {
     NSInteger editingRow ;
