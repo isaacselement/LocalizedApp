@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -650,27 +650,27 @@
         <window title="LocalizedApp" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="962" height="626"/>
+            <rect key="contentRect" x="335" y="390" width="1063" height="634"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="962" height="626"/>
+                <rect key="frame" x="0.0" y="0.0" width="1063" height="634"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="536">
-                        <rect key="frame" x="-1" y="43" width="964" height="542"/>
+                        <rect key="frame" x="-1" y="43" width="1065" height="550"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" id="we8-Fi-jis">
-                            <rect key="frame" x="1" y="17" width="962" height="524"/>
+                            <rect key="frame" x="1" y="17" width="1063" height="532"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="539" id="537" customClass="ISTableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="962" height="524"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1063" height="532"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="959" minWidth="40" maxWidth="1000" id="541">
+                                        <tableColumn width="1000" minWidth="40" maxWidth="1000" id="541">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -701,12 +701,12 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="539">
-                            <rect key="frame" x="0.0" y="0.0" width="962" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1063" height="17"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="553">
-                        <rect key="frame" x="422" y="590" width="119" height="33"/>
+                        <rect key="frame" x="472" y="598" width="119" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="115" id="565"/>
@@ -721,7 +721,7 @@
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="572">
-                        <rect key="frame" x="422" y="4" width="119" height="33"/>
+                        <rect key="frame" x="472" y="4" width="119" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="574"/>
@@ -735,7 +735,7 @@
                         </connections>
                     </button>
                     <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FT-8F-C8o">
-                        <rect key="frame" x="777" y="4" width="119" height="33"/>
+                        <rect key="frame" x="827" y="4" width="94" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="wQy-LT-G8K"/>
@@ -746,6 +746,20 @@
                         </buttonCell>
                         <connections>
                             <action selector="deleteRow:" target="494" id="b02-Or-nV8"/>
+                        </connections>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="5bW-rP-eTl">
+                        <rect key="frame" x="741" y="4" width="70" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="V4B-Ci-WXi"/>
+                        </constraints>
+                        <buttonCell key="cell" type="bevel" title="Duplicate" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V5H-IJ-eo3">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="10"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="duplicateRow:" target="494" id="9BX-LW-ES2"/>
                         </connections>
                     </button>
                 </subviews>
@@ -760,12 +774,15 @@
                     <constraint firstAttribute="bottom" secondItem="572" secondAttribute="bottom" constant="7" id="583"/>
                     <constraint firstItem="572" firstAttribute="top" secondItem="536" secondAttribute="bottom" constant="8" symbolic="YES" id="584"/>
                     <constraint firstItem="4FT-8F-C8o" firstAttribute="leading" secondItem="572" secondAttribute="trailing" constant="240" id="1D9-4m-3pf"/>
+                    <constraint firstItem="4FT-8F-C8o" firstAttribute="leading" secondItem="5bW-rP-eTl" secondAttribute="trailing" constant="20" id="3Ge-s4-kjO"/>
+                    <constraint firstItem="5bW-rP-eTl" firstAttribute="top" secondItem="536" secondAttribute="bottom" constant="8" id="tFI-Vq-Hhn"/>
                     <constraint firstItem="572" firstAttribute="centerY" secondItem="4FT-8F-C8o" secondAttribute="centerY" id="wIA-aB-5u8"/>
                 </constraints>
             </view>
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="duplicateRow" destination="5bW-rP-eTl" id="E41-yS-efm"/>
                 <outlet property="tableView" destination="537" id="587"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>

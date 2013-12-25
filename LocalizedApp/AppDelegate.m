@@ -104,6 +104,29 @@
     [tableView reloadData];
 }
 
+- (IBAction)duplicateRow:(id)sender {
+    NSUInteger selectedRow = [tableView selectedRow];
+    
+    NSMutableArray* allLocalizeKeys = GLOBAL.allLocalizeKeys ;
+    NSMutableDictionary* allFileContents = GLOBAL.allFileContents ;
+    
+    NSString* selectedKey = [allLocalizeKeys objectAtIndex: selectedRow];
+    NSMutableDictionary* contents = [NSMutableDictionary dictionary];
+    for (NSString* filePath in allFileContents) {
+        NSString* content = [allFileContents[filePath] objectForKey: selectedKey];
+        [contents setObject: content forKey:filePath];
+    }
+    
+    NSString* newKey = [@"zCopy " stringByAppendingString:selectedKey];
+    [GLOBAL addKeyInAllFileContents:newKey contents:contents];
+    
+    [tableView deselectAll:nil];
+    [tableView reloadData];
+    
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:allLocalizeKeys.count-1];
+    [tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+}
+
 
 
 #pragma mark - NSTableView datasource methods

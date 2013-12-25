@@ -1,8 +1,6 @@
 #import "ISTableView.h"
 #import "AppInterface.h"
 
-#define NEW_KEY  @"zz--"
-
 @interface ISTableView () {
     NSInteger editingRow ;
     NSInteger editingColumn ;
@@ -17,37 +15,23 @@
     NSString* changedText = [textObject.string copy];
     
     NSMutableArray* allLocalizeKeys = GLOBAL.allLocalizeKeys ;
-    NSMutableDictionary* allFileContents = GLOBAL.allFileContents ;
-    
-    NSTableColumn* tableColumn = [self.tableColumns objectAtIndex: editingColumn];
-    NSString* identifiction = tableColumn.identifier;
-    
     NSString* editingKey = [allLocalizeKeys objectAtIndex: editingRow];
     
     // modified key
     if (editingColumn == 0) {
-        
-        if ([allLocalizeKeys containsObject: changedText]) {
+        NSString* changedKey = changedText;
+        BOOL isSuccess = [GLOBAL changeKeyInAllFileContents: editingKey newKey:changedKey];
+        if (! isSuccess) {
             NSRunAlertPanel(@"Error", @"Duplicated key", @"OK", nil, nil);
-        } else {
-            // modified key . change all the keys-values
-            [allLocalizeKeys replaceObjectAtIndex:editingRow withObject:changedText];
-            for (NSString* key in allFileContents) {
-                NSMutableDictionary* content = [allFileContents objectForKey:key];
-                id value = [content objectForKey: editingKey];
-                [content setObject: value forKey:changedText];
-                [content removeObjectForKey: editingKey];
-            }
         }
         
     // modified content
     } else {
         
-        NSMutableDictionary* contents = [allFileContents objectForKey: identifiction];
-        [contents setObject: changedText forKey:editingKey];
-        
+        NSString* changedContent = changedText;
+        NSTableColumn* tableColumn = [self.tableColumns objectAtIndex: editingColumn];
+        [GLOBAL changeContentInFile: tableColumn.identifier newContent:changedContent forKey:editingKey];
     }
-    
     
     editingRow = editingColumn = -1;
     return YES;
@@ -65,26 +49,21 @@
 	}
     
     NSMutableArray* allLocalizeKeys = GLOBAL.allLocalizeKeys ;
-    NSMutableDictionary* allFileContents = GLOBAL.allFileContents ;
     
+    // add new key and new contents
     if (row >= allLocalizeKeys.count) {
         NSLog(@"Editing in New row");
-        // add key . change all the keys-values
-        [allLocalizeKeys addObject: NEW_KEY];
-        for (NSString* key in allFileContents) {
-            NSMutableDictionary* content = [allFileContents objectForKey:key];
-            [content setObject:NEW_KEY forKey:NEW_KEY];
-        }
+        [GLOBAL addNewKeyInAllFileContents];
     }
     
     
-    NSArray* tableColumns = self.tableColumns;
-    NSTableColumn* tableColumn = [tableColumns objectAtIndex: column];
-    NSString* identifiction = tableColumn.identifier;
+    NSTableColumn* tableColumn = [self.tableColumns objectAtIndex: column];
     
     NSString* editingKey = [allLocalizeKeys objectAtIndex: row];
     
     NSLog(@"editColumn (%d, %d)", (int)row , (int)column);
+    
+    NSString* identifiction = tableColumn.identifier;
     NSLog(@"identification %@ , key %@", identifiction, editingKey);
     
     

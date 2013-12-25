@@ -13,5 +13,6 @@
 - (IBAction)openFiles:(id)sender;
 - (IBAction)saveFiles:(id)sender;
 - (IBAction)deleteRow:(id)sender;
+- (IBAction)duplicateRow:(id)sender;
 
 @end
