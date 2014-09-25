@@ -2,6 +2,9 @@
 #import "AppDelegate.h"
 #import "AppInterface.h"
 
+@interface AppDelegate() <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
+
+@end
 
 @implementation AppDelegate
 

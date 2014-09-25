@@ -7,20 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E19C833186A6FC0001FB4F5 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C809186A6FC0001FB4F5 /* NSData+Base64.m */; };
-		4E19C834186A6FC0001FB4F5 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C80B186A6FC0001FB4F5 /* NSString+Base64.m */; };
-		4E19C835186A6FC0001FB4F5 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C80F186A6FC0001FB4F5 /* FileManager.m */; };
-		4E19C836186A6FC0001FB4F5 /* JsonFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C811186A6FC0001FB4F5 /* JsonFileManager.m */; };
-		4E19C837186A6FC0001FB4F5 /* LocalizeFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C813186A6FC0001FB4F5 /* LocalizeFileManager.m */; };
-		4E19C838186A6FC0001FB4F5 /* HTTPGetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C817186A6FC0001FB4F5 /* HTTPGetRequest.m */; };
-		4E19C839186A6FC0001FB4F5 /* HTTPPostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C819186A6FC0001FB4F5 /* HTTPPostRequest.m */; };
-		4E19C83A186A6FC0001FB4F5 /* HTTPRequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C81B186A6FC0001FB4F5 /* HTTPRequestBase.m */; };
-		4E19C83B186A6FC0001FB4F5 /* HTTPUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C81D186A6FC0001FB4F5 /* HTTPUploader.m */; };
-		4E19C83C186A6FC0001FB4F5 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C823186A6FC0001FB4F5 /* CHCSVParser.m */; };
-		4E19C83D186A6FC0001FB4F5 /* CSVFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C826186A6FC0001FB4F5 /* CSVFileWriter.m */; };
-		4E19C83E186A6FC0001FB4F5 /* CategoriesLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C82A186A6FC0001FB4F5 /* CategoriesLocalizer.m */; };
-		4E19C83F186A6FC0001FB4F5 /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C82C186A6FC0001FB4F5 /* LocalizeHelper.m */; };
-		4E19C840186A6FC0001FB4F5 /* LocalizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E19C82E186A6FC0001FB4F5 /* LocalizeManager.m */; };
 		4E78078C181B4DCD00D456DD /* GlobalInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E78078B181B4DCD00D456DD /* GlobalInstance.m */; };
 		4E7808B1181B721300D456DD /* OpenFilesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7808B0181B721300D456DD /* OpenFilesPanel.m */; };
 		4EC4882117DD77E200A759AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC4882017DD77E200A759AF /* Cocoa.framework */; };
@@ -34,6 +20,12 @@
 		4EC4884817DD77E300A759AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4884617DD77E300A759AF /* InfoPlist.strings */; };
 		4EC4884B17DD77E300A759AF /* LocalizedAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4884A17DD77E300A759AF /* LocalizedAppTests.m */; };
 		4EC4885617DD7E1500A759AF /* ISTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4885517DD7E1500A759AF /* ISTableView.m */; };
+		4EF4D2E619D3B8B300299F72 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2B619D3B8B300299F72 /* FileManager.m */; };
+		4EF4D2E719D3B8B300299F72 /* JsonFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2B819D3B8B300299F72 /* JsonFileManager.m */; };
+		4EF4D2E819D3B8B300299F72 /* LocalizeFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2BA19D3B8B300299F72 /* LocalizeFileManager.m */; };
+		4EF4D2ED19D3B8B300299F72 /* CategoriesLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2C819D3B8B300299F72 /* CategoriesLocalizer.m */; };
+		4EF4D2EE19D3B8B300299F72 /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2CA19D3B8B300299F72 /* LocalizeHelper.m */; };
+		4EF4D2EF19D3B8B300299F72 /* LocalizeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D2CC19D3B8B300299F72 /* LocalizeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,41 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E19C805186A6FC0001FB4F5 /* _Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Data.h; sourceTree = "<group>"; };
-		4E19C807186A6FC0001FB4F5 /* _Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Base64.h; sourceTree = "<group>"; };
-		4E19C808186A6FC0001FB4F5 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		4E19C809186A6FC0001FB4F5 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		4E19C80A186A6FC0001FB4F5 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		4E19C80B186A6FC0001FB4F5 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		4E19C80D186A6FC0001FB4F5 /* _File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _File.h; sourceTree = "<group>"; };
-		4E19C80E186A6FC0001FB4F5 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
-		4E19C80F186A6FC0001FB4F5 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
-		4E19C810186A6FC0001FB4F5 /* JsonFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonFileManager.h; sourceTree = "<group>"; };
-		4E19C811186A6FC0001FB4F5 /* JsonFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonFileManager.m; sourceTree = "<group>"; };
-		4E19C812186A6FC0001FB4F5 /* LocalizeFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeFileManager.h; sourceTree = "<group>"; };
-		4E19C813186A6FC0001FB4F5 /* LocalizeFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeFileManager.m; sourceTree = "<group>"; };
-		4E19C815186A6FC0001FB4F5 /* _HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _HTTP.h; sourceTree = "<group>"; };
-		4E19C816186A6FC0001FB4F5 /* HTTPGetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPGetRequest.h; sourceTree = "<group>"; };
-		4E19C817186A6FC0001FB4F5 /* HTTPGetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPGetRequest.m; sourceTree = "<group>"; };
-		4E19C818186A6FC0001FB4F5 /* HTTPPostRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPPostRequest.h; sourceTree = "<group>"; };
-		4E19C819186A6FC0001FB4F5 /* HTTPPostRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPPostRequest.m; sourceTree = "<group>"; };
-		4E19C81A186A6FC0001FB4F5 /* HTTPRequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestBase.h; sourceTree = "<group>"; };
-		4E19C81B186A6FC0001FB4F5 /* HTTPRequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestBase.m; sourceTree = "<group>"; };
-		4E19C81C186A6FC0001FB4F5 /* HTTPUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPUploader.h; sourceTree = "<group>"; };
-		4E19C81D186A6FC0001FB4F5 /* HTTPUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPUploader.m; sourceTree = "<group>"; };
-		4E19C81F186A6FC0001FB4F5 /* _Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Library.h; sourceTree = "<group>"; };
-		4E19C821186A6FC0001FB4F5 /* _CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CHCSVParser.h; sourceTree = "<group>"; };
-		4E19C822186A6FC0001FB4F5 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
-		4E19C823186A6FC0001FB4F5 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
-		4E19C825186A6FC0001FB4F5 /* CSVFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVFileWriter.h; sourceTree = "<group>"; };
-		4E19C826186A6FC0001FB4F5 /* CSVFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVFileWriter.m; sourceTree = "<group>"; };
-		4E19C828186A6FC0001FB4F5 /* _Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Localize.h; sourceTree = "<group>"; };
-		4E19C829186A6FC0001FB4F5 /* CategoriesLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesLocalizer.h; sourceTree = "<group>"; };
-		4E19C82A186A6FC0001FB4F5 /* CategoriesLocalizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesLocalizer.m; sourceTree = "<group>"; };
-		4E19C82B186A6FC0001FB4F5 /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
-		4E19C82C186A6FC0001FB4F5 /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
-		4E19C82D186A6FC0001FB4F5 /* LocalizeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeManager.h; sourceTree = "<group>"; };
-		4E19C82E186A6FC0001FB4F5 /* LocalizeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeManager.m; sourceTree = "<group>"; };
 		4E78078A181B4DCD00D456DD /* GlobalInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalInstance.h; sourceTree = "<group>"; };
 		4E78078B181B4DCD00D456DD /* GlobalInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalInstance.m; sourceTree = "<group>"; };
 		4E78078D181B4E7400D456DD /* AppInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInterface.h; sourceTree = "<group>"; };
@@ -112,6 +69,21 @@
 		4EC4884A17DD77E300A759AF /* LocalizedAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizedAppTests.m; sourceTree = "<group>"; };
 		4EC4885417DD7E1500A759AF /* ISTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTableView.h; sourceTree = "<group>"; };
 		4EC4885517DD7E1500A759AF /* ISTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTableView.m; sourceTree = "<group>"; };
+		4EF4D28319D3B8B300299F72 /* _Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Data.h; sourceTree = "<group>"; };
+		4EF4D2B419D3B8B300299F72 /* _File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _File.h; sourceTree = "<group>"; };
+		4EF4D2B519D3B8B300299F72 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		4EF4D2B619D3B8B300299F72 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		4EF4D2B719D3B8B300299F72 /* JsonFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonFileManager.h; sourceTree = "<group>"; };
+		4EF4D2B819D3B8B300299F72 /* JsonFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonFileManager.m; sourceTree = "<group>"; };
+		4EF4D2B919D3B8B300299F72 /* LocalizeFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeFileManager.h; sourceTree = "<group>"; };
+		4EF4D2BA19D3B8B300299F72 /* LocalizeFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeFileManager.m; sourceTree = "<group>"; };
+		4EF4D2C619D3B8B300299F72 /* _Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Localize.h; sourceTree = "<group>"; };
+		4EF4D2C719D3B8B300299F72 /* CategoriesLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesLocalizer.h; sourceTree = "<group>"; };
+		4EF4D2C819D3B8B300299F72 /* CategoriesLocalizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesLocalizer.m; sourceTree = "<group>"; };
+		4EF4D2C919D3B8B300299F72 /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
+		4EF4D2CA19D3B8B300299F72 /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
+		4EF4D2CB19D3B8B300299F72 /* LocalizeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeManager.h; sourceTree = "<group>"; };
+		4EF4D2CC19D3B8B300299F72 /* LocalizeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,105 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E19C804186A6FC0001FB4F5 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C805186A6FC0001FB4F5 /* _Data.h */,
-				4E19C806186A6FC0001FB4F5 /* Base64 */,
-				4E19C80C186A6FC0001FB4F5 /* File */,
-				4E19C814186A6FC0001FB4F5 /* HTTP */,
-				4E19C81E186A6FC0001FB4F5 /* Library */,
-				4E19C827186A6FC0001FB4F5 /* Localize */,
-			);
-			name = Data;
-			path = ../../../Modules/Data;
-			sourceTree = "<group>";
-		};
-		4E19C806186A6FC0001FB4F5 /* Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C807186A6FC0001FB4F5 /* _Base64.h */,
-				4E19C808186A6FC0001FB4F5 /* NSData+Base64.h */,
-				4E19C809186A6FC0001FB4F5 /* NSData+Base64.m */,
-				4E19C80A186A6FC0001FB4F5 /* NSString+Base64.h */,
-				4E19C80B186A6FC0001FB4F5 /* NSString+Base64.m */,
-			);
-			path = Base64;
-			sourceTree = "<group>";
-		};
-		4E19C80C186A6FC0001FB4F5 /* File */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C80D186A6FC0001FB4F5 /* _File.h */,
-				4E19C80E186A6FC0001FB4F5 /* FileManager.h */,
-				4E19C80F186A6FC0001FB4F5 /* FileManager.m */,
-				4E19C810186A6FC0001FB4F5 /* JsonFileManager.h */,
-				4E19C811186A6FC0001FB4F5 /* JsonFileManager.m */,
-				4E19C812186A6FC0001FB4F5 /* LocalizeFileManager.h */,
-				4E19C813186A6FC0001FB4F5 /* LocalizeFileManager.m */,
-			);
-			path = File;
-			sourceTree = "<group>";
-		};
-		4E19C814186A6FC0001FB4F5 /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C815186A6FC0001FB4F5 /* _HTTP.h */,
-				4E19C816186A6FC0001FB4F5 /* HTTPGetRequest.h */,
-				4E19C817186A6FC0001FB4F5 /* HTTPGetRequest.m */,
-				4E19C818186A6FC0001FB4F5 /* HTTPPostRequest.h */,
-				4E19C819186A6FC0001FB4F5 /* HTTPPostRequest.m */,
-				4E19C81A186A6FC0001FB4F5 /* HTTPRequestBase.h */,
-				4E19C81B186A6FC0001FB4F5 /* HTTPRequestBase.m */,
-				4E19C81C186A6FC0001FB4F5 /* HTTPUploader.h */,
-				4E19C81D186A6FC0001FB4F5 /* HTTPUploader.m */,
-			);
-			path = HTTP;
-			sourceTree = "<group>";
-		};
-		4E19C81E186A6FC0001FB4F5 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C81F186A6FC0001FB4F5 /* _Library.h */,
-				4E19C820186A6FC0001FB4F5 /* CHCSVParser */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		4E19C820186A6FC0001FB4F5 /* CHCSVParser */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C821186A6FC0001FB4F5 /* _CHCSVParser.h */,
-				4E19C822186A6FC0001FB4F5 /* CHCSVParser.h */,
-				4E19C823186A6FC0001FB4F5 /* CHCSVParser.m */,
-				4E19C824186A6FC0001FB4F5 /* Extensions */,
-			);
-			path = CHCSVParser;
-			sourceTree = "<group>";
-		};
-		4E19C824186A6FC0001FB4F5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C825186A6FC0001FB4F5 /* CSVFileWriter.h */,
-				4E19C826186A6FC0001FB4F5 /* CSVFileWriter.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4E19C827186A6FC0001FB4F5 /* Localize */ = {
-			isa = PBXGroup;
-			children = (
-				4E19C828186A6FC0001FB4F5 /* _Localize.h */,
-				4E19C829186A6FC0001FB4F5 /* CategoriesLocalizer.h */,
-				4E19C82A186A6FC0001FB4F5 /* CategoriesLocalizer.m */,
-				4E19C82B186A6FC0001FB4F5 /* LocalizeHelper.h */,
-				4E19C82C186A6FC0001FB4F5 /* LocalizeHelper.m */,
-				4E19C82D186A6FC0001FB4F5 /* LocalizeManager.h */,
-				4E19C82E186A6FC0001FB4F5 /* LocalizeManager.m */,
-			);
-			path = Localize;
-			sourceTree = "<group>";
-		};
 		4E7808A9181B721300D456DD /* OSXModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +187,7 @@
 		4EC4882617DD77E200A759AF /* LocalizedApp */ = {
 			isa = PBXGroup;
 			children = (
-				4E19C804186A6FC0001FB4F5 /* Data */,
+				4EF4D28219D3B8B300299F72 /* Data */,
 				4E7808A9181B721300D456DD /* OSXModules */,
 				4EC4883217DD77E200A759AF /* AppDelegate.h */,
 				4EC4883317DD77E200A759AF /* AppDelegate.m */,
@@ -360,6 +233,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4EF4D28219D3B8B300299F72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4D28319D3B8B300299F72 /* _Data.h */,
+				4EF4D2B319D3B8B300299F72 /* File */,
+				4EF4D2C519D3B8B300299F72 /* Localize */,
+			);
+			name = Data;
+			path = ../../../Modules/Data;
+			sourceTree = "<group>";
+		};
+		4EF4D2B319D3B8B300299F72 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4D2B419D3B8B300299F72 /* _File.h */,
+				4EF4D2B519D3B8B300299F72 /* FileManager.h */,
+				4EF4D2B619D3B8B300299F72 /* FileManager.m */,
+				4EF4D2B719D3B8B300299F72 /* JsonFileManager.h */,
+				4EF4D2B819D3B8B300299F72 /* JsonFileManager.m */,
+				4EF4D2B919D3B8B300299F72 /* LocalizeFileManager.h */,
+				4EF4D2BA19D3B8B300299F72 /* LocalizeFileManager.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		4EF4D2C519D3B8B300299F72 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4D2C619D3B8B300299F72 /* _Localize.h */,
+				4EF4D2C719D3B8B300299F72 /* CategoriesLocalizer.h */,
+				4EF4D2C819D3B8B300299F72 /* CategoriesLocalizer.m */,
+				4EF4D2C919D3B8B300299F72 /* LocalizeHelper.h */,
+				4EF4D2CA19D3B8B300299F72 /* LocalizeHelper.m */,
+				4EF4D2CB19D3B8B300299F72 /* LocalizeManager.h */,
+				4EF4D2CC19D3B8B300299F72 /* LocalizeManager.m */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,7 +309,7 @@
 			name = LocalizedAppTests;
 			productName = LocalizedAppTests;
 			productReference = 4EC4883D17DD77E300A759AF /* LocalizedAppTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -469,25 +381,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E19C83E186A6FC0001FB4F5 /* CategoriesLocalizer.m in Sources */,
+				4EF4D2EF19D3B8B300299F72 /* LocalizeManager.m in Sources */,
+				4EF4D2E819D3B8B300299F72 /* LocalizeFileManager.m in Sources */,
 				4EC4882D17DD77E200A759AF /* main.m in Sources */,
-				4E19C83F186A6FC0001FB4F5 /* LocalizeHelper.m in Sources */,
-				4E19C836186A6FC0001FB4F5 /* JsonFileManager.m in Sources */,
-				4E19C837186A6FC0001FB4F5 /* LocalizeFileManager.m in Sources */,
-				4E19C83D186A6FC0001FB4F5 /* CSVFileWriter.m in Sources */,
+				4EF4D2E719D3B8B300299F72 /* JsonFileManager.m in Sources */,
 				4E78078C181B4DCD00D456DD /* GlobalInstance.m in Sources */,
 				4EC4883417DD77E200A759AF /* AppDelegate.m in Sources */,
-				4E19C838186A6FC0001FB4F5 /* HTTPGetRequest.m in Sources */,
-				4E19C840186A6FC0001FB4F5 /* LocalizeManager.m in Sources */,
-				4E19C83A186A6FC0001FB4F5 /* HTTPRequestBase.m in Sources */,
-				4E19C83B186A6FC0001FB4F5 /* HTTPUploader.m in Sources */,
-				4E19C83C186A6FC0001FB4F5 /* CHCSVParser.m in Sources */,
-				4E19C835186A6FC0001FB4F5 /* FileManager.m in Sources */,
+				4EF4D2EE19D3B8B300299F72 /* LocalizeHelper.m in Sources */,
 				4E7808B1181B721300D456DD /* OpenFilesPanel.m in Sources */,
+				4EF4D2ED19D3B8B300299F72 /* CategoriesLocalizer.m in Sources */,
 				4EC4885617DD7E1500A759AF /* ISTableView.m in Sources */,
-				4E19C833186A6FC0001FB4F5 /* NSData+Base64.m in Sources */,
-				4E19C834186A6FC0001FB4F5 /* NSString+Base64.m in Sources */,
-				4E19C839186A6FC0001FB4F5 /* HTTPPostRequest.m in Sources */,
+				4EF4D2E619D3B8B300299F72 /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

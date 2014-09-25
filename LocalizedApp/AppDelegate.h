@@ -5,7 +5,7 @@
 
 @class ISTableView;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface AppDelegate : NSObject 
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet ISTableView *tableView;

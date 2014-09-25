@@ -1,14 +1,11 @@
 #import "ISTableView.h"
 #import "AppInterface.h"
 
-@interface ISTableView () {
+@implementation ISTableView
+{
     NSInteger editingRow ;
     NSInteger editingColumn ;
 }
-
-@end
-
-@implementation ISTableView
 
 
 - (BOOL)textShouldEndEditing:(NSText *)textObject {
@@ -69,6 +66,49 @@
     
     editingRow = row;
     editingColumn = column;
+}
+
+
+- (void)keyUp:(NSEvent *)theEvent {
+    
+    switch ([theEvent keyCode]) {
+        case 123:    // Left arrow
+        NSLog(@"Left behind.");
+        break;
+        case 124:    // Right arrow
+        NSLog(@"Right as always!");
+        [self getSelectedTextField];
+        break;
+        case 125:    // Down arrow
+        NSLog(@"Downward is Heavenward");
+        break;
+        case 126:    // Up arrow
+        NSLog(@"Up, up, and away!");
+        break;
+        default:
+        break;
+    }
+    
+//    [self interpretKeyEvents:[NSArray arrayWithObject:theEvent]];
+}
+
+- (void)getSelectedTextField
+{
+    NSInteger selected = [self selectedRow];
+    
+    // Get row at specified index
+    NSTableCellView *selectedRow = [self viewAtColumn:0 row:selected makeIfNecessary:YES];
+    
+    // Get row's text field
+    NSTextField *selectedRowTextField = [selectedRow textField];
+    NSLog(@"%@ , %@", selectedRow, selectedRowTextField);
+    if (selectedRowTextField) [selectedRowTextField becomeFirstResponder];
+    
+    // Focus on text field to make it auto-editable
+//    [[self window] makeFirstResponder:selectedRowTextField];
+//    
+//    // Set the keyboard carat to the beginning of the text field
+//    [[selectedRowTextField currentEditor] setSelectedRange:NSMakeRange(0, 0)];
 }
 
 
